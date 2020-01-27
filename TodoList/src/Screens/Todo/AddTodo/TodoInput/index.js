@@ -13,9 +13,10 @@ const Container = Styled.KeyboardAvoidingView`
     justify-content: flex-end;
 `;
 
+//  https://stackoverflow.com/questions/48420468/keyboardavoidingview-not-working-properly
 const TodoInput = ({ hideTodoInput }) => {
     return (
-        <Container behavior="padding">
+        <Container behavior={Platform.select({android: undefined, ios: 'padding'})}>
             <Background onPress={hideTodoInput} />
             <TextInput hideTodoInput={hideTodoInput} />
         </Container>
