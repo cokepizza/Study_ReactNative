@@ -56,7 +56,7 @@ const BigCatalog = ({ id, image, year, title, genres, onPress }) => {
                 }
             }}>
             <CatalogImage
-                source={{ url: image }}
+                source={{ uri: image }}
                 style={{ width: Dimensions.get('window').width, height: 300 }}
             />
             <InfoContainer>
@@ -64,7 +64,7 @@ const BigCatalog = ({ id, image, year, title, genres, onPress }) => {
                 <SubInfoContainer>
                     <Background />
                     <LabelTitle>{title}</LabelTitle>
-                    <LabelGenres>{genres.json(',')}</LabelGenres>
+                    <LabelGenres>{genres.join(',')}</LabelGenres>
                 </SubInfoContainer>
             </InfoContainer>
         </Container>

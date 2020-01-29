@@ -56,18 +56,18 @@ const SubCatalogList = ({ title, url, onPress }) => {
                     keyExtractor={( item, index ) => {
                         return `catalogList-${item.id}-${index}`;
                     }}
-                    renderItem={({ item, index }) => {
+                    renderItem={({ item, index }) => (
                         <CatalogImageContainer
                             activeOpacity={1}
                             onPress={() => {
                                 onPress(item.id);
                             }}>
                             <CatalogImage
-                                source={{ url: item.large_cover_image }}
+                                source={{ uri: item.large_cover_image }}
                                 style={{ width: 136, height: 201 }}
                             />
                         </CatalogImageContainer>
-                    }}
+                    )}
                 />
             </CatalogContainer>
         </Container>

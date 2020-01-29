@@ -42,7 +42,7 @@ const MovieHome = ({ navigation }) => {
             />
             <SubCatalogList
                 title="최근 등록순"
-                url="https://tys.lt/api/v2/list_movies.json?sort_by=date_added&order_by=desc&limit=10"
+                url="https://yts.lt/api/v2/list_movies.json?sort_by=date_added&order_by=desc&limit=10"
                 onPress={id => {
                     navigation.navigate('MovieDetail', {
                         id,
@@ -75,7 +75,7 @@ MovieHome.navigationOptions = ({ navigation }) => {
     const logout = navigation.getParam('logout');
     return {
         title: 'MOVIEAPP',
-        headerTintColor: '#70915',
+        headerTintColor: '#E70915',
         headerStyle: {
             backgroundColor: '#141414',
             borderBottomWidth: 0,
@@ -84,7 +84,7 @@ MovieHome.navigationOptions = ({ navigation }) => {
             fontWeight: 'bold',
         },
         headerBackTitle: null,
-        headerRight: (
+        headerRight:() => (
             <StyleButton
                 onPress={() => {
                     if (logout && typeof logout === 'function') {
