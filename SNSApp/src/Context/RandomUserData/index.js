@@ -134,7 +134,7 @@ const RandomUserDataProvider = ({ cache, children }) => {
         return images;
     }
 
-    const getMyFeed = number => {
+    const getMyFeed = (number = 10) => {
         let feeds = [];
         for(let i=0; i<number; ++i) {
             const user = userList[Math.floor(Math.random() * 24)];

@@ -35,8 +35,8 @@ import Drawer from '~Screens/Drawer';
 
 const LoginNavigator = createStackNavigator({
     Login,
-    SignUp,
-    passwordReset,
+    Signup,
+    PasswordReset,
 });
 
 const MyFeedTab = createStackNavigator({
