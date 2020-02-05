@@ -13,7 +13,7 @@ const CheckLogin = ({ navigation }) => {
     AsyncStorage.getItem('key')
         .then(value => {
             if(value) {
-                navigation.navigate('MainTabNavigator');
+                navigation.navigate('MainNavigator');
             } else {
                 navigation.navigate('LoginNavigator');
             }

@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList } from 'react-native';
 
 import Styled from 'styled-components/native';
-import StoryBackground from '~/Assets/Images/story_background.jpg';
+import StoryBackgroundImage from '~/Assets/Images/story_background.jpg';
 
 const StoryContainer = Styled.View`
     padding: 8px;
@@ -46,7 +46,8 @@ const StoryList = ({ storyList }) => {
                 <StoryContainer>
                     <Story>
                         <StoryBackground
-                            source={StoryBackground}
+                            // style={{ width: 20, height: 20 }}
+                            source={StoryBackgroundImage}
                         />
                         <StoryImage
                             source={{ uri: item.photo }}

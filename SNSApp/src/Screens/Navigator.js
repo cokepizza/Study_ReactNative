@@ -1,16 +1,15 @@
 import React from 'react';
 import { Image } from 'react-native';
-import Home from '~/Assets/Images/Tabs/home.png';
+import HomeDefault from '~/Assets/Images/Tabs/home.png';
 import HomeFocused from '~/Assets/Images/Tabs/home_focused.png';
-import Search from '~/Assets/Images/Tabs/search.png';
+import SearchDefault from '~/Assets/Images/Tabs/search.png';
 import SearchFocused from '~/Assets/Images/Tabs/search_focused.png';
-import Upload from '~/Assets/Images/Tabs/upload.png';
+import UploadDefault from '~/Assets/Images/Tabs/upload.png';
 import UploadFocused from '~/Assets/Images/Tabs/upload_focused.png';
-import Notification from '~Assets/Images/Tabs/notification.png';
+import NotificationDefault from '~Assets/Images/Tabs/notification.png';
 import NotificationFocused from '~Assets/Images/Tabs/notification_focused.png';
-import Profile from '~/Assets/Images/Tabs/profile.png';
+import ProfileDefault from '~/Assets/Images/Tabs/profile.png';
 import ProfileFocused from '~/Assets/Images/Tabs/profile_focused.png';
-
 
 import {
     createSwitchNavigator,
@@ -26,7 +25,7 @@ import PasswordReset from '~/Screens/PasswordReset';
 import Signup from '~/Screens/Signup';
 
 import MyFeed from '~/Screens/MyFeed';
-import Feeds from '`/Screens/Feeds`';
+import Feeds from '~/Screens/Feeds';
 import FeedListOnly from '~/Screens/FeedListOnly';
 import Upload from '~/Screens/Upload';
 import Notification from '~/Screens/Notification';
@@ -62,10 +61,11 @@ const MainTabs = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => (
                 <Image
+                    style={{ width: 20, height: 20 }}
                     source={
                         focused
                             ? HomeFocused
-                            : Home
+                            : HomeDefault
                     }
                 />
             ), 
@@ -79,10 +79,11 @@ const MainTabs = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => (
                 <Image
+                    style={{ width: 20, height: 20 }}
                     source={
                         focused
                             ? SearchFocused
-                            : Search
+                            : SearchDefault
                     }
                 />
             )
@@ -96,10 +97,11 @@ const MainTabs = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => (
                 <Image
+                    style={{ width: 20, height: 20 }}
                     source={
                         focused
                             ? UploadFocused
-                            : Upload
+                            : UploadDefault
                     }
                 />
             )
@@ -111,17 +113,16 @@ const MainTabs = createBottomTabNavigator({
     Notification: {
         screen: Notification,
         navigationOptions: {
-            tabBarIcon: {
-                tabBarIcon: ({ focused }) => (
-                    <Image
-                        source={
-                            focused
-                                ? NotificationFocused
-                                : Notification
-                        }
-                    />
-                )
-            }
+            tabBarIcon: ({ focused }) => (
+                <Image
+                    style={{ width: 20, height: 20 }}
+                    source={
+                        focused
+                            ? NotificationFocused
+                            : NotificationDefault
+                    }
+                />
+            )
         },
         tabBarOptions: {
             showLabel: false,
@@ -132,10 +133,11 @@ const MainTabs = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => (
                 <Image
+                    style={{ width: 20, height: 20 }}
                     source={
                         focused
                             ? ProfileFocused
-                            : Profile
+                            : ProfileDefault
                     }
                 />
             )

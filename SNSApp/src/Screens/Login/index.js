@@ -12,7 +12,7 @@ const Container = Styled.SafeAreaView`
 
 const FormContainer = Styled.View`
     flex: 1;
-    width: 100%:
+    width: 100%;
     align-items: center;
     justify-content: center;
     padding: 32px;

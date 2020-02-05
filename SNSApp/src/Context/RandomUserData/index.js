@@ -23,7 +23,7 @@ const RandomUserDataProvider = ({ cache, children }) => {
 
     const getCacheData = async (key) => {
         const cachedData = await AsyncStorage.getItem(key);
-        if (cache === false || cacheData === null) {
+        if (cache === false || cachedData === null) {
             return undefined;
         }
         const cacheList = JSON.parse(cachedData);
@@ -58,7 +58,6 @@ const RandomUserDataProvider = ({ cache, children }) => {
 
     const setDescriptions = async () => {
         const cachedData = await getCacheData('DescriptionList');
-        console.log(cachedData);
         if (cachedData) {
             setDescriptionList(cachedData);
             return;
@@ -66,8 +65,6 @@ const RandomUserDataProvider = ({ cache, children }) => {
 
         try {
             const response = await fetch('https://opinionated-quotes-api.gigalixirapp.com/v1/quotes?rand=t&n=25');
-            console.dir(response);
-            //  이게 프로미스라고?
             const data = await response.json();
             
             let text = [];

@@ -1,24 +1,15 @@
 import React, { useContext, useState, useEffect } from 'react';
-import Styled from 'styled-components/native';
 import { FlatList } from 'react-native';
 import { RandomUserDataContext } from '~/Context/RandomUserData';
-import IconButton from '~/Components/IconButton';
 import Feed from '~/Components/Feed';
-import StoryList from './StoryList';
 
-const Container = Styled.View`
-    flex-direction: row;
-`;
-
-const MyFeed = ({ navigation }) => {
+const FeedListOnly = ({ navigation }) => {
     const { getMyFeed } = useContext(RandomUserDataContext);
     const [ feedList, setFeedList ] = useState([]);
-    const [ storyList, setStoryList ] = useState([]);
     const [ loading, setLoading ] = useState(false);
 
     useEffect(() => {
         setFeedList(getMyFeed());
-        setStoryList(getMyFeed());
     }, []);
 
     return (
@@ -32,7 +23,6 @@ const MyFeed = ({ navigation }) => {
                 setLoading(true);
                 setTimeout(() => {
                     setFeedList(getMyFeed());
-                    setStoryList(getMyFeed());
                     setLoading(false);
                 }, 2000);
             }}
@@ -41,7 +31,6 @@ const MyFeed = ({ navigation }) => {
             }}
             onEndReachedThreshold={0.5}
             refreshing={loading}
-            listHeaderComponent={<StoryList storyList={storyList} />}
             renderItem={({ item, index }) => (
                 <Feed
                     id={index}
@@ -55,15 +44,9 @@ const MyFeed = ({ navigation }) => {
     );
 };
 
-MyFeed.navigationOptions = {
-    title: 'SNS App',
-    headerLeft: () => (<IconButton iconName="camera" />),
-    headerRight: () => (
-        <Container>
-            <IconButton iconName="live"/>
-            <IconButton iconName="send"/>
-        </Container>
-    ),
-};
+FeedListOnly.navigationOptions = {
+    title: '둘러보기',
+    headerTintColor: '#292929',
+}
 
-export default MyFeed;
+export default FeedListOnly;

@@ -13,7 +13,10 @@ const Container = Styled.TouchableOpacity`
     padding: 8px;
 `;
 
-const Icon = Styled.Image``;
+const Icon = Styled.Image`
+    width: 25px;
+    height: 25px;
+`;
 
 const IconButton = ({ iconName, style, onPress }) => {
     const imageSource = {

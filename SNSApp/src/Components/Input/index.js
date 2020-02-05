@@ -15,6 +15,7 @@ const Container = Styled.View`
 const InputField = Styled.TextInput`
     flex: 1;
     color: #292929;
+    width: 100%;
 `;
 
 const Input = ({
@@ -25,6 +26,7 @@ const Input = ({
     clearMode,
     onChangeText,
 }) => {
+    
     return (
         <Container style={style}>
             <InputField

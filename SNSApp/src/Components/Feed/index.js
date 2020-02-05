@@ -55,7 +55,7 @@ const Feed = ({ id, name, photo, description, images }) => {
             <FeedFooter>
                 <Description numberOfLines={2} >
                     <UserName>{name}</UserName>
-                    {description}
+                    {' '}{description}
                 </Description>
             </FeedFooter>
         </Container>
