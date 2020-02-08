@@ -20,7 +20,7 @@ const TabImage = Styled.Image`
     margin-top: 8px;
 `;
 
-const Tab = ({ selected, label, imageSource, onPress }) => {
+const Tab = ({ imageStyle, selected, label, imageSource, onPress }) => {
     let color = selected ? '#292929' : '#929292';
 
     return (
@@ -29,7 +29,7 @@ const Tab = ({ selected, label, imageSource, onPress }) => {
             style={{ borderColor: color }}
             onPress={onPress}>
             {label && <Label style={{ color }} >{label}</Label>}
-            {imageSource && <TabImage source={imageSource}/>}
+            {imageSource && <TabImage source={imageSource} style={imageStyle} />}
         </Container>
     )
 };
