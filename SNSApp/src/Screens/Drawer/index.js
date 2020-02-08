@@ -19,7 +19,7 @@ const Header = Styled.View`
 
 const Title = Styled.Text``;
 
-const Button = Styled.TouchableHighlight`
+const Button = Styled.TouchableOpacity`
     padding: 8px 16px;
 `;
 

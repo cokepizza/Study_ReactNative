@@ -94,7 +94,7 @@ const PasswordReset = ({ navigation }) => {
                 <HelpLabel>도움이 더 필요해요?</HelpLabel>
             </FormContainer>
             <Footer>
-                <GoBack onPress={()=> navigation.GoBack()}>
+                <GoBack onPress={()=> navigation.goBack()}>
                     로그인으로 돌아가기
                 </GoBack>
             </Footer>
