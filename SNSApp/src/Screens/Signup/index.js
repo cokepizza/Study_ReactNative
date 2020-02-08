@@ -51,14 +51,14 @@ const Signup = ({ navigation }) => {
         <Container>
             <FormContainer>
                 <TabContainer>
-                    {tabs.map((label, index) => {
+                    {tabs.map((label, index) => (
                         <Tab
                             key={`tab-${index}`}
                             selected={tabIndex === index}
                             label={label}
                             onPress={() => setTabIndex(index)}
                         />
-                    })}
+                    ))}
                 </TabContainer>
                 <Input
                     style={{ marginBottom: 16 }}
@@ -82,7 +82,7 @@ const Signup = ({ navigation }) => {
 };
 
 Signup.navigationOptions = {
-    header: null,
+    headerShown: false,
 };
 
 export default Signup;

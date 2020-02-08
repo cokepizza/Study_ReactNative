@@ -26,7 +26,7 @@ const CheckLogin = ({ navigation }) => {
 };
 
 CheckLogin.navigationOptions = {
-    header: null,
+    headerShown: false,
 }
 
 export default CheckLogin;

@@ -93,7 +93,7 @@ const Login = ({ navigation }) => {
 };
 
 Login.navigationOptions = {
-    header: null,
+    headerShown: false,
 };
 
 export default Login;

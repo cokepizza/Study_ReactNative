@@ -17,7 +17,7 @@ const Label = Styled.Text`
 const Button = ({ label, style, color, onPress }) => {
     return (
         <StyleButton style={style} onPress={onPress}>
-            <Label style={{ color: color ? color: '#FFFFFFF' }} >{label}</Label>
+            <Label style={{ color: color ? color: '#FFFFFF' }} >{label}</Label>
         </StyleButton>
     );
 };

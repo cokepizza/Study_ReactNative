@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Styled from 'styled-components/native';
 import Input from '~/Components/Input';
 import Button from '~/Components/Button';
@@ -72,19 +72,19 @@ const PasswordReset = ({ navigation }) => {
         <Container>
             <FormContainer>
                 <LockImageContainer>
-                    <LockImage source={Lock}/>
+                    <LockImage style={{ width: 20, height: 20 }} source={Lock}/>
                 </LockImageContainer>
                 <Title>로그인에 문제가 있나요?</Title>
                 <Description>{tabDescriptions[tabIndex]}</Description>
                 <TabContainer>
-                    {tabs.map((label, index) => {
+                    {tabs.map((label, index) => (
                         <Tab
                             key={`tab-${index}`}
                             selected={tabIndex === index}
                             label={label}
                             onPress={() => setTabIndex(index)}
                         />
-                    })}
+                    ))}
                 </TabContainer>
                 <Input
                     style={{ marginBottom: 16 }}
@@ -103,7 +103,7 @@ const PasswordReset = ({ navigation }) => {
 };
 
 PasswordReset.navigationOptions = {
-    header: null,
+    headerShown: false,
 };
 
 export default PasswordReset;
