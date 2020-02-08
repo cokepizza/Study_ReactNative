@@ -68,10 +68,10 @@ const MainTabs = createBottomTabNavigator({
                             : HomeDefault
                     }
                 />
-            ), 
-        },
-        tabBarOptions: {
-            showLabel: false,
+            ),
+            tabBarOptions: {
+                showLabel: false,
+            },
         },
     },
     Feeds: {
@@ -86,10 +86,10 @@ const MainTabs = createBottomTabNavigator({
                             : SearchDefault
                     }
                 />
-            )
-        },
-        tabBarOptions: {
-            showLabel: false,
+            ),
+            tabBarOptions: {
+                showLabel: false,
+            },
         },
     },
     Upload: {
@@ -104,10 +104,10 @@ const MainTabs = createBottomTabNavigator({
                             : UploadDefault
                     }
                 />
-            )
-        },
-        tabBarOptions: {
-            showLabel: false,
+            ),
+            tabBarOptions: {
+                showLabel: false,
+            },
         },
     },
     Notification: {
@@ -122,10 +122,10 @@ const MainTabs = createBottomTabNavigator({
                             : NotificationDefault
                     }
                 />
-            )
-        },
-        tabBarOptions: {
-            showLabel: false,
+            ),
+            tabBarOptions: {
+                showLabel: false,
+            },
         },
     },
     Profile: {
@@ -140,10 +140,10 @@ const MainTabs = createBottomTabNavigator({
                             : ProfileDefault
                     }
                 />
-            )
-        },
-        tabBarOptions: {
-            showLabel: false,
+            ),
+            tabBarOptions: {
+                showLabel: false,
+            },
         },
     },
 });
